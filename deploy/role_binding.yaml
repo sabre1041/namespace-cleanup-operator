@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: namespace-cleanup-operator
+subjects:
+- kind: ServiceAccount
+  name: namespace-cleanup-operator
+roleRef:
+  kind: Role
+  name: namespace-cleanup-operator
+  apiGroup: rbac.authorization.k8s.io
